@@ -1,0 +1,10 @@
+--- a/drivers/net/phy/sfp.c	2026-11-13 15:33:15.178040863 -0500
++++ b/drivers/net/phy/sfp.c	2026-11-13 15:35:08.908775935 -0500
+@@ -538,6 +538,7 @@ static const struct sfp_quirk sfp_quirks
+ 	SFP_QUIRK_F("Turris", "RTSFP-10", sfp_fixup_rollball),
+ 	SFP_QUIRK_F("Turris", "RTSFP-10G", sfp_fixup_rollball),
+ 	SFP_QUIRK_F("JESS-LINK", "P60000BBC001-1", sfp_fixup_rollball),
++	SFP_QUIRK_F("XZSNET", "XZS-SFP10G-T", sfp_fixup_ignore_tx_fault),
+ };
+ 
+ static size_t sfp_strlen(const char *str, size_t maxlen)
